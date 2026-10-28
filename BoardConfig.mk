@@ -26,7 +26,7 @@ AB_OTA_PARTITIONS += \
     vendor_dlkm \
     vendor \
     boot
-BOARD_USES_RECOVERY_AS_BOOT := true
+
 
 # Architecture
 TARGET_ARCH := arm64
@@ -45,6 +45,11 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
+
+
+#Buid vendorboot
+BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
+BOARD_VENDORBOOT_PARTITION_SIZE := 134217728
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
